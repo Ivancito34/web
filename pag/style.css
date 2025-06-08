@@ -1,0 +1,244 @@
+/* --- Reset y estilos generales --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Para evitar scroll */
+}
+
+/* --- Fondo con imagen --- */
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMAGENES/pic.png'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* --- Contenedor principal --- */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Texto blanco (contraste con fondo oscuro) */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Títulos --- */
+.titulo-principal {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    
+}
+
+.nombre-autor {
+    font-size: 1rem; 
+    font-family: "Oswald", sans-serif;
+    margin-top: 0;
+    margin-bottom: 0; 
+    letter-spacing: 3px;
+   
+}
+
+.subtitulo {
+    margin-top: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.linea1 {
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 5px;
+    display: block;
+    margin-bottom: -30px;
+}
+
+.linea2 {
+    font-size: 5.5rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: -5px;
+}
+
+.linea3 {
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 3px;
+    display: block;
+}
+
+/* --- Estilo para "IMPORTACIÓN" --- */
+.importacion {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem; /* Tamaño destacado */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin: 5px 0; /* Espacio reducido arriba/abajo */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Menú de botones --- */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.boton {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 2xp;
+    padding: 5px 10px;
+    background-color: rgba(55, 56, 56, 0.8); 
+    color: rgb(252, 252, 252);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    
+}
+
+.boton:hover {
+    background-color: rgba(64, 65, 66, 0.9); /* Azul más oscuro al pasar el mouse */
+}
+
+/* --- Estilo Base para Secciones --- */
+.seccion {
+    background-color: #383837;
+    min-height: 100vh;
+    padding: 40px;
+    color: #e0e0e0;
+    font-family: "Oswald", sans-serif;
+}
+
+.contenido-seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: texto | imagen */
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Texto --- */
+.texto-seccion {
+    padding: 20px;
+}
+
+.texto-seccion h2 {
+     font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.texto-seccion p {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.9;
+    color: #f0f0f0;
+    margin: 25px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.texto-seccion p::before {
+    content: "•";
+    color: #eaeef1;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.imagen-seccion {
+    max-height: 60vh;
+    width: 80%;
+    object-fit: contain;
+    background: #dbd9d9;
+    padding: 15px;
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+.imagen-seccion:nth-child(even) {
+    transform: rotate(2deg); /* Alterna la rotación */
+}
+
+.imagen-seccion:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+
+.boton-regreso {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste fino de centrado */
+    z-index: 1000; /* Capa superior (sobre todo) */
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    transition: all 0.3s;
+}
+
+.boton-regreso:hover {
+    background-color: #444;
+    transform: translateX(-50%) scale(1.05); /* Efecto hover manteniendo el centrado */
+}
+
+.boton-regreso:hover {
+    background-color: #444;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .contenido-seccion {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+    
+    .imagen-seccion {
+        order: 1; /* Imagen arriba en móviles */
+    }
+    .texto-seccion h2 {
+        font-size: 2rem;
+    }
+    .texto-seccion p {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+}
+
+
+body {
+    overflow-y: auto !important; /* Fuerza el scroll vertical */
+}
